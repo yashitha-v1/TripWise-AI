@@ -1,0 +1,48 @@
+TRIPWISE AI — START HERE (WINDOWS)
+
+1) Check your D: drive
+   Open File Explorer > This PC. Confirm that D: exists and has enough free space.
+   If D: does not exist, use a folder under your user profile, such as:
+   %USERPROFILE%\TripWiseAI
+
+2) Check Node.js
+   Open Start > type PowerShell > open Windows PowerShell.
+   Run these commands one at a time:
+     node -v
+     npm -v
+   If both print version numbers, continue. If either says it is not recognized,
+   install the current Node.js LTS version from https://nodejs.org/en/download
+   and then close and reopen PowerShell.
+
+3) Extract this ZIP
+   Extract the folder to D:\TripWiseAI (or another folder you can write to).
+   Do not run npm commands while still inside the ZIP preview.
+
+4) Open PowerShell in the project folder
+   In File Explorer, open the extracted TripWiseAI folder, click the address bar,
+   type powershell, and press Enter.
+   Check you are in the correct folder by running:
+     dir
+   You should see package.json and the client and server folders.
+
+5) Install dependencies (internet required; packages are free)
+     npm install
+     npm --prefix server install
+     npm --prefix client install
+
+6) Start both apps
+     npm run dev
+   Keep this terminal window open. The terminal should show a Vite URL and an API URL.
+   Open http://localhost:5173 in your browser.
+
+7) Test it
+   Enter origin, destination, dates, number of travellers, budget and optional interests.
+   Click Save trip request. Refresh the page; the saved trip should still be there.
+   SQLite file will be created at server\data\trips.db.
+
+NOTES
+- No AI model is installed in this milestone.
+- No paid APIs are used.
+- Internet is needed for the initial npm dependency installation.
+- Prices are not fetched yet. This milestone only saves trip requests.
+- To stop the app, focus the terminal and press Ctrl+C.

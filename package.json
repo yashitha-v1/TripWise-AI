@@ -1,0 +1,14 @@
+{
+  "name": "tripwise-ai-milestone1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zero-cost local-first travel planner milestone 1",
+  "scripts": {
+    "dev": "concurrently -k \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
